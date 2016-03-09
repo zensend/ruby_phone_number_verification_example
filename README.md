@@ -7,7 +7,7 @@ Redis
 Getting Started
 ---------------
 
-Edit `config.yml` to add your Zensend API key and Redis URL.
+Edit `config.yml` to add your Zensend API key and Redis URL. If you're running in production, make sure you add a secret_key as well.
 
 Run `bundle install` in the root directory
 

@@ -19,6 +19,8 @@ REDIS_CONNECTION = Redis.new(url: settings.redis_url)
 
 enable :sessions
 
+set :secret, settings.respond_to?(:secret_key) ? settings.secret_key : SecureRandom.hex(16)
+
 get '/success' do
   @msisdn = session['verified_msisdn']
 

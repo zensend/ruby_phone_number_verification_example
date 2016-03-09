@@ -1,2 +1,4 @@
 redis_url: redis://localhost/0
 zensend_api_key: APIKEY
+# generate a secret key if you're deploying in production
+# secret_key: secretekey
