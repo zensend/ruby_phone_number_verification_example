@@ -64,7 +64,7 @@ post '/verify_token' do
 
   attempts = REDIS_CONNECTION.hincrby(msisdn_token, "attempts", 1)
 
-  if attempts >= MAX_ATTEMPTS
+  if attempts > MAX_ATTEMPTS
     @error = "Maximum attempts"
 
     return erb :verify_token
@@ -78,7 +78,7 @@ post '/verify_token' do
     return redirect "/success"
   end
 
-  @error = "Invalid token"
+  @error = attempts >= MAX_ATTEMPTS ? "Maximum attempts" : "Invalid token"
 
   erb :verify_token
 end
