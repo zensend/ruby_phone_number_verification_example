@@ -1,3 +1,5 @@
 gem 'sinatra'
 gem 'zensend'
 gem 'redis'
+gem 'sinatra-flash'
+gem 'sinatra-contrib'
