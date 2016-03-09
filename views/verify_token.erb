@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Verify Phone Number</title>
+
+    <style type="text/css">
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <p>Please enter the code sent to you to verify your phone number.</p>
+
+    <form method="POST" action="/verify_token">
+      <input type="text" name="token">
+      <input type="submit" value="Verify">
+    </form>
+
+    <% if @error %>
+      <div class="error"><%= @error %></div>
+    <% end %>
+
+  </body>
+
+</html>

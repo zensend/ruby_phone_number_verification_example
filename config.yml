@@ -1,0 +1,2 @@
+redis_url: redis://localhost/0
+zensend_api_key: APIKEY
