@@ -97,7 +97,7 @@ post '/verify_number' do
   client = ZenSend::Client.new(settings.zensend_api_key)
 
   begin
-    sms_response = client.send_sms({
+    client.send_sms({
       originator: "VERIFY",
       body: sms_token,
       numbers: [msisdn]
